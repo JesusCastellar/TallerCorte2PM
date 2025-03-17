@@ -1,0 +1,7 @@
+<ion-list>
+  <app-task-item *ngFor="let task of tasks$ | async"
+    [task]="task"
+    (toggleComplete)="toggleComplete($event)"
+    (delete)="deleteTask($event)">
+  </app-task-item>
+</ion-list>

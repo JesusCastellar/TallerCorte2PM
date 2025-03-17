@@ -1,0 +1,11 @@
+<ion-item>
+  <ion-checkbox slot="start" [checked]="task.done" (ionChange)="onToggleComplete()"></ion-checkbox>
+  <ion-label>
+    <h2 [class.completed]="task.done">{{ task.title }}</h2>
+    <p>{{ task.description }}</p>
+    <p><strong>Fecha:</strong> {{ task.date | date:'short' }}</p>
+  </ion-label>
+  <ion-button fill="clear" color="danger" (click)="onDelete()">
+    <ion-icon name="trash"></ion-icon>
+  </ion-button>
+</ion-item>
